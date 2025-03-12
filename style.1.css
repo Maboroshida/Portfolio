@@ -1,0 +1,17 @@
+@charset "UTF-8";
+* {
+  font-family: 微軟正黑體;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+.block {
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.border {
+  border: 1px solid #000;
+}
