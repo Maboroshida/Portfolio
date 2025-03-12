@@ -1,0 +1,763 @@
+$color_white: #f3f3f3
+$color_yellow: #FFD633
+$color_gold: #FFD700
+$color_black: #333
+$color_blue_start: #19283D
+$color_blue_end: #1D678F
+$color_LB: #7fb2f5
+$color_SB: #0066CC
+$color_rain: #4DACFF
+$color_white_cloud: #f2f9fe
+$color_LW: #f5fffa
+$color_grey_cloud: #ccc
+$color_brown: #844200
+$color_BO: #e28743
+$color_dark_green: #00A600
+$color_light_green: #00DB00
+$color_orange: #FF8000
+$color_red: #f5461c
+$color_sunset: #d37a5a
+$color_salmon_pink: #f5560c
+$color_LR: #d24220
+$color_green: #26ee30
+$color_LG: #41c548
+$color_SG: #006f06
+$color_LO: #FFA07A
+$color_OrangeRed: #FF4500
+$firefly: #FFD633
+$firefly_light1: #FFD633
+$firefly_light2: #FFD633
+$firefly_light3: #FFD633
+
+*
+  // border: solid 1px
+  font-family: 'Hind Vadodara', sans-serif,微軟正黑體
+  position: relative
+
+html,body
+  width: 100%
+  height: 100%
+  padding: 0px
+  margin: 0px
+  display: flex
+  justify-content: center
+  align-items: center
+
+@mixin size($w,$h)
+  width: $w
+  height: $h
+
+@keyframes sun_shine
+  50%
+    filter: drop-shadow(0px 0px 4px $color_LR)
+  
+@keyframes daydark
+  0%
+    background-position: 0% 0%
+  100%
+    background-position: 0% 100%
+
+@keyframes cloud_drift
+  0%
+    transform: translateY(0px)
+  50%
+    transform: translateY(-2px)
+  100%
+    transform: translateY(0px)
+  
+@keyframes no_cloud
+  0%
+    transform: translateX(0px)
+    opacity: 1
+  50%
+    opacity: 1
+  100%
+    transform: translateX(100px)
+    opacity: 0
+  
+  
+@keyframes light_shadow
+  0%
+    opacity: 1
+    box-shadow: 0px 0px 5px 5px rgba($firefly,0)
+  10%
+    opacity: 1
+    box-shadow: 0px 0px 5px 5px rgba($firefly,0.2)
+  20%
+    opacity: 1
+    box-shadow: 0px 0px 5px 5px rgba($firefly,0.4)
+  30%
+    opacity: 1
+    box-shadow: 0px 0px 5px 5px rgba($firefly,0.6)
+  40%
+    opacity: 1
+    box-shadow: 0px 0px 5px 5px rgba($firefly,0.8)
+  50%
+    opacity: 1
+    box-shadow: 0px 0px 5px 5px rgba($firefly,1) 
+  60%
+    opacity: 1
+    box-shadow: 0px 0px 5px 5px rgba($firefly,0.8)
+  70%
+    opacity: 1
+    box-shadow: 0px 0px 5px 5px rgba($firefly,0.6)
+  80%
+    opacity: 1
+    box-shadow: 0px 0px 5px 5px rgba($firefly,0.4)
+  90%
+    opacity: 1
+    box-shadow: 0px 0px 5px 5px rgba($firefly,0.2)
+  100%
+    opacity: 1
+    box-shadow: 0px 0px 5px 5px rgba($firefly,0)
+  
+@keyframes light_move1
+  0%
+    opacity: 1
+    transform: translateX(0px) translateY(0px)
+  10%
+    opacity: 1
+    transform: translateX(-5px) translateY(5px)
+  20%
+    opacity: 1
+    transform: translateY(-10px) translateY(10px)
+  30%
+    opacity: 1
+    transform: translateX(-15px) translateY(15px)
+  40%
+    opacity: 1
+    transform: translateX(-15px) translateY(20px)
+  50%
+    opacity: 1
+    transform: translateX(-5px) translateY(15px)
+  60%
+    opacity: 1
+    transform: translateX(0px) translateY(10px)
+  70%
+    opacity: 1
+    transform: translateX(5px) translateY(5px)
+  80%
+    opacity: 1
+    transform: translateX(10px) translateY(0px)
+  90%
+    opacity: 1
+    transform: translateX(5px) translateY(5px)
+  100%
+    opacity: 1
+    transform: translateX(0px) translateY(0px)
+@keyframes light_move2
+  0%
+    opacity: 1
+    transform: translateX(0px) translateY(0px)
+  10%
+    opacity: 1
+    transform: translateX(5px) translateY(5px)
+  20%
+    opacity: 1
+    transform: translateY(-5px) translateY(-5px)
+  30%
+    opacity: 1
+    transform: translateX(-15px) translateY(-15px)
+  40%
+    opacity: 1
+    transform: translateX(-10px) translateY(-10px)
+  50%
+    opacity: 1
+    transform: translateX(10px) translateY(10px)
+  60%
+    opacity: 1
+    transform: translateX(15px) translateY(5px)
+  70%
+    opacity: 1
+    transform: translateX(15px) translateY(10px)
+  80%
+    opacity: 1
+    transform: translateX(15px) translateY(0px)
+  90%
+    opacity: 1
+    transform: translateX(5px) translateY(5px)
+  100%
+    opacity: 1
+    transform: translateX(0px) translateY(0px)
+@keyframes light_move3
+  0%
+    opacity: 1
+    transform: translateX(0px) translateY(10px)
+  10%
+    opacity: 1
+    transform: translateX(0px) translateY(5px)
+  20%
+    opacity: 1
+    transform: translateY(-5px) translateY(-5px)
+  30%
+    opacity: 1
+    transform: translateX(-5px) translateY(-10px)
+  40%
+    opacity: 1
+    transform: translateX(-10px) translateY(-15px)
+  50%
+    opacity: 1
+    transform: translateX(0px) translateY(-5px)
+  60%
+    opacity: 1
+    transform: translateX(5px) translateY(5px)
+  70%
+    opacity: 1
+    transform: translateX(10px) translateY(0px)
+  80%
+    opacity: 1
+    transform: translateX(15px) translateY(5px)
+  90%
+    opacity: 1
+    transform: translateX(15px) translateY(10px)
+  100%
+    opacity: 1
+    transform: translateX(20px) translateY(15px)
+@keyframes light_move4
+  0%
+    opacity: 1
+    transform: translateX(5px) translateY(5px)
+  10%
+    opacity: 1
+    transform: translateX(5px) translateY(10px)
+  20%
+    opacity: 1
+    transform: translateY(10px) translateY(15px)
+  30%
+    opacity: 1
+    transform: translateX(10px) translateY(10px)
+  40%
+    opacity: 1
+    transform: translateX(5px) translateY(5px)
+  50%
+    opacity: 1
+    transform: translateX(5px) translateY(0px)
+  60%
+    opacity: 1
+    transform: translateX(5px) translateY(-5px)
+  70%
+    opacity: 1
+    transform: translateX(0px) translateY(-5px)
+  80%
+    opacity: 1
+    transform: translateX(-5px) translateY(-10px)
+  90%
+    opacity: 1
+    transform: translateX(-10px) translateY(0px)
+  100%
+    opacity: 1
+    transform: translateX(0px) translateY(10px)
+@keyframes light_move5
+  0%
+    opacity: 1
+    transform: translateX(10px) translateY(10px)
+  10%
+    opacity: 1
+    transform: translateX(15px) translateY(5px)
+  20%
+    opacity: 1
+    transform: translateY(15px) translateY(15px)
+  30%
+    opacity: 1
+    transform: translateX(18px) translateY(15px)
+  40%
+    opacity: 1
+    transform: translateX(21px) translateY(18px)
+  50%
+    opacity: 1
+    transform: translateX(21px) translateY(21px)
+  60%
+    opacity: 1
+    transform: translateX(23px) translateY(21px)
+  70%
+    opacity: 1
+    transform: translateX(16px) translateY(19px)
+  80%
+    opacity: 1
+    transform: translateX(10px) translateY(10px)
+  90%
+    opacity: 1
+    transform: translateX(5px) translateY(5px)
+  100%
+    opacity: 1
+    transform: translateX(0px) translateY(0px)
+  
+@keyframes raindrop
+  0%
+    transform: translateY(0px)
+  100%
+    transform: translateY(45px)
+    opacity: 0
+  
+.daybox
+  background-color: $color_LB
+  width: 50%
+  max-width: 400px
+  box-shadow: 0px 0px 20px rgba($color_black,0.4)
+  border-radius: 5px
+
+  .top
+    height: 330px
+    background: $color_LB
+    background-size: 100% 300%
+    border-radius: 5px
+    overflow: hidden
+  
+    .sun_set
+      fill: rgba($color_yellow,0.7)
+      stroke: rgba($color_yellow,0.2)
+      stroke-width: 8px
+      animation: sun_shine 3s infinite
+    .moon
+      transform: translateY(150px)
+      fill: rgba($color_white,0.7)
+      stroke-width: 8px
+      stroke: rgba($color_white,0.2)
+      
+  .cloud
+    fill: $color_white
+    box-shadow: 0px 0px 20px rgba($color_black,0.4)
+    animation: cloud_drift 2s infinite, 
+  .black_cloud
+    transform: translateX(100px)
+
+  .tussock
+    position: absolute
+    fill: $color_green
+    filter: drop-shadow(0px 0px 10px $color_LG)
+    transform: translateY(70px)
+  .tussock2
+    position: absolute
+    fill: $color_LG
+    transform: translateY(70px)
+  .tussock3
+    position: absolute
+    fill: $color_SG
+    transform: translateY(70px)
+
+  .text_area
+    position: absolute
+    bottom: 25px
+    left: 10px  
+  .text_area2
+    position: absolute
+    transform: translateX(-150px) translateY(-207px)
+    color: rgba($color_white,2)
+
+  .temperature
+    font-size: 52px
+    line-height: 60px
+    padding-left: 0px
+      
+  .infos
+    font-size: 13px
+      
+  .orange_tree
+    position: absolute
+    width: 250px
+    height: 250px
+    bottom: -92px
+    right: 10px
+      
+  .firefly1
+    background-color: $firefly
+    width: 10px
+    height: 10px
+    left: 210px
+    top: -170px
+    border-radius: 50%
+    background: radial-gradient(rgba($firefly_light1,1),rgba($firefly_light2,0.8),rgba($firefly_light3,0.8))
+    opacity: 0
+
+  .firefly2
+    background-color: $firefly
+    width: 8px
+    height: 8px
+    left: 266px
+    top: -180px
+    border-radius: 50%
+    background: radial-gradient(rgba($firefly_light1,1),rgba($firefly_light2,0.8),rgba($firefly_light3,0.8))
+    opacity: 0
+
+  .firefly3
+    background-color: $firefly
+    width: 6px
+    height: 6px
+    left: 235px
+    top: -170px
+    border-radius: 50%
+    background: radial-gradient(rgba($firefly_light1,1),rgba($firefly_light2,0.8),rgba($firefly_light3,0.8))
+    opacity: 0
+
+  .firefly4
+    background-color: $firefly
+    width: 6px
+    height: 6px
+    left: 290px
+    top: -160px
+    border-radius: 50%
+    background: radial-gradient(rgba($firefly_light1,1),rgba($firefly_light2,0.8),rgba($firefly_light3,0.8))
+    opacity: 0
+
+  .firefly5
+    background-color: $firefly
+    width: 4px
+    height: 4px
+    left: 320px
+    top: -155px
+    border-radius: 50%
+    background: radial-gradient(rgba($firefly_light1,1),rgba($firefly_light2,0.8),rgba($firefly_light3,0.8))
+    opacity: 0
+      
+.medium
+  height: 140px
+  display: flex
+  justify-content: center
+  box-shadow: 0px 0px 20px rgba($color_black,0.4)
+  background-color: rgba($color_white,0.4)
+   
+  .dayweather
+    width: calc(100% / 7 - 5px)
+    display: inline-block
+    text-align: center
+    h3
+      padding-top: 20px
+      font-size: 13px
+    svg
+      width: 100%
+      max-width: 40px
+      height: 40px
+      .bottom_sun
+        stroke-width: 20px
+        stroke-dasharray: 5px
+        stroke: rgba($color_yellow,0.5)
+        fill: $color_yellow
+        
+      .bottom_cloud
+        fill: $color_white
+        animation: cloud_drift 2s infinite
+        
+      .rain
+        stroke-width: 10px
+        stroke: $color_LB
+  
+.temsvg
+  height: 10px
+  width: 100%
+  stroke: $color_white
+  stroke-width: 1px
+  border-radius: 0px 0px 5px 5px
+  transition-duration: 2s
+  
+  circle
+    fill: $color_white
+    opacity: 0
+    top: 20px
+  
+  polyline
+    stroke: $color_white
+    fill: none
+    opacity: 0
+    top: 20px
+    
+  text
+    fill: $color_white
+    stroke-width: 0px
+    font-weight: 200
+    font-size: 15px
+    line-height: 60px
+    padding-left: 5px
+    transform: translateX(-9px) translateY(20px)
+    opacity: 0
+    top: 20px
+    
+.text_area
+  display: inline-block
+  position: absolute
+  bottom: 25px
+  left: 10px
+
+//     .orange_tree1
+//       position: absolute
+//       border-top: 1px $color_brown
+//       width: 95px
+//       height: 10px
+//       top: 283px
+//       left: 190px
+//       transform: rotate(93deg)
+//       background-color: $color_brown
+//     .orange_tree2
+//       position: absolute
+//       border-top: 1px $color_brown
+//       width: 95px
+//       height: 10px
+//       top: 283px
+//       left: 195px
+//       transform: rotate(89deg)
+//       background-color: $color_brown
+//     .orange_tree3
+//       position: absolute
+//       border-top: 1px solid $color_brown
+//       border-radius: 10px
+//       width: 39px
+//       height: 11px
+//       bottom: 95px
+//       left: 217px
+//       transform: rotate(70deg)
+//       background-color: $color_brown
+//     .orange_tree4
+//       position: absolute
+//       border-top: 1px solid $color_brown
+//       border-radius: 10px
+//       transform: rotate(37deg)
+//       width: 44px
+//       height: 10px
+//       bottom: 79px
+//       right: 115px
+//       background-color: $color_brown
+//     .orange_tree5
+//       position: absolute
+//       border-top: 1px solid $color_brown
+//       border-radius: 10px
+//       transform: rotate(27deg)
+//       width: 98px
+//       height: 10px
+//       bottom: 40px
+//       right: 109px
+//       background-color: $color_brown  
+//     .orange_tree6
+//       position: absolute
+//       border-top: 1px solid $color_brown
+//       border-radius: 10px
+//       transform: rotate(154deg)
+//       width: 74px
+//       height: 10px
+//       bottom: 46px
+//       right: 47px
+//       background-color: $color_brown 
+//     .orange_tree7
+//       position: absolute
+//       border-top: 1px solid $color_brown
+//       border-radius: 10px
+//       transform: rotate(120deg)
+//       width: 40px
+//       height: 10px
+//       bottom: 59px
+//       right: 70px
+//       background-color: $color_brown
+    
+//     .fruit_twig1
+//       position: absolute
+//       transform: rotate(90deg)
+//       border-radius: 20px
+//       width: 19px
+//       height: 7px
+//       top: 248px
+//       left: 204px
+//       background-color: $color_brown
+//     .fruit_twig2
+//       position: absolute
+//       border-top: 1px solid $color_brown
+//       border-radius: 20px
+//       transform: rotate(90deg)
+//       width: 19px
+//       height: 7px
+//       top: 286px
+//       left: 188px
+//       background-color: $color_brown
+//     .fruit_twig3
+//       position: absolute
+//       border-top: 1px solid $color_brown
+//       border-radius: 20px
+//       transform: rotate(90deg)
+//       width: 23px
+//       height: 7px
+//       top: 283px
+//       left: 263px
+//       background-color: $color_brown
+
+//     .orange1
+//       position: absolute
+//       border-radius: 50%
+//       width: 26px
+//       height: 21px
+//       left: 200px
+//       bottom: 52px
+//       background-color: $color_orange
+//     .orange2
+//       position: absolute
+//       border-radius: 50%
+//       width: 30px
+//       height: 30px
+//       left: 182px
+//       bottom: 5px
+//       background-color: $color_orange
+//     .orange3
+//       position: absolute
+//       border-radius: 50%
+//       width: 30px
+//       height: 30px
+//       left: 260px
+//       bottom: 10px
+//       background-color: $color_orange
+
+//     .leaf1
+//       position: absolute
+//       width: 34px
+//       height: 30px
+//       border-radius: 28px 0px 28px 0px
+//       transform: rotate(26deg)
+//       right: 83px
+//       top: 210px
+//       background-color: $color_light_green
+//     .leaf2
+//       position: absolute
+//       width: 34px
+//       height: 30px
+//       border-radius: 28px 0px 28px 0px
+//       transform: rotate(76deg)
+//       right: 143px
+//       top: 214px
+//       background-color: $color_dark_green
+//     .leaf3
+//       position: absolute
+//       width: 34px
+//       height: 30px
+//       border-radius: 28px 0px 28px 0px
+//       transform: rotate(77deg)
+//       right: 185px
+//       top: 243px
+//       background-color: $color_light_green
+//     .leaf4
+//       position: absolute
+//       width: 34px
+//       height: 30px
+//       border-radius: 28px 0px 28px 0px
+//       transform: rotate(24deg)
+//       right: 161px
+//       top: 270px
+//       background-color: $color_dark_green
+//     .leaf5
+//       position: absolute
+//       width: 34px
+//       height: 30px
+//       border-radius: 28px 0px 28px 0px
+//       transform: rotate(80deg)
+//       right: 42px
+//       top: 268px
+//       background-color: $color_dark_green
+//     .leaf6
+//       position: absolute
+//       width: 34px
+//       height: 30px
+//       border-radius: 28px 0px 28px 0px
+//       transform: rotate(20deg)
+//       right: 27px
+//       top: 243px
+//       background-color: $color_light_green
+    
+.daybox    
+  &:hover
+    .top
+      animation: daydark 25s
+      animation-delay: 5s
+      animation-fill-mode: forwards
+      background: linear-gradient($color_SB 0%,$color_LB 11%,$color_gold 22%,$color_salmon_pink 33%,$color_LO 44%,#e5ad98 55%,#363332 66%,#080707 77%,#000000 100%)
+      background-size: 100% 800%
+    .sun_set
+      fill: rgba($color_yellow,0.7)
+      transform: translateY(150px)
+      transition-duration: 18s
+      transition-delay: 9s
+    .moon
+      transform: translateY(0px)
+      transition-duration: 11s
+      transition-delay: 21s
+      
+    .cloud
+      animation: no_cloud 5s
+      animation-fill-mode: forwards
+      animation-delay: 6s
+      
+    .black_cloud
+      transform: translateX(0px)
+      transition-duration: 8s
+      transition-delay: 16s
+      fill: $color_black
+    
+    .orange_tree
+      opacity: 0
+      transition-duration: 3s
+      transition-delay: 1s
+      
+    .tussock, .tussock2, .tussock3
+      transform: translateY(0px)
+      transition-duration: 6s
+      transition-delay: 30s
+   
+    .text_area
+      transform: translateX(-180px)
+      transition-duration: 5s
+      transition-delay: 4s
+    .text_area2
+      transform: translateX(10px) translateY(-207px)
+      transition-duration: 4s
+      transition-delay: 35s
+      
+    .firefly1
+      animation: light_move1 4s infinite, light_shadow 4s infinite linear
+      opacity: 0
+      animation-delay: 40s
+      
+    .firefly2
+      animation: light_move2 4s infinite, light_shadow 4s infinite linear
+      animation-delay: 40s
+      opacity: 0
+      
+    .firefly3
+      animation: light_move3 4s infinite, light_shadow 4s infinite linear
+      animation-delay: 40s
+      opacity: 0
+      
+    .firefly4
+      animation: light_move4 4s infinite, light_shadow 4s infinite linear
+      animation-delay: 40s
+      opacity: 0
+      
+    .firefly5
+      animation: light_move5 4s infinite, light_shadow 4s infinite linear
+      animation-delay: 40s
+      opacity: 0
+    
+    .temsvg
+      height: 140px
+
+      circle
+        opacity: 1
+
+      polyline
+        opacity: 1
+
+      text
+        opacity: 1
+    
+.rain
+  +size(2px,13px)
+  position: absolute
+  left: 45px
+  bottom: 15px
+  animation-delay: 0s
+  animation: raindrop 1s infinite linear
+.rain2
+  left: 25px
+  bottom: 20px
+  animation-delay: -0.4s
+.rain3
+  left: 65px
+  bottom: 20px
+  animation-delay: -0.7s
+
+
+  
+
+    
