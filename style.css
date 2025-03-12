@@ -1,0 +1,88 @@
+@charset "UTF-8";
+* {
+  font-family: 微軟正黑體;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-weight: bold;
+}
+
+header.jumbotron {
+  text-align: center;
+  background-image: url(https://static.pexels.com/photos/8807/sopot.jpg);
+  background-size: cover;
+  background-position: center center;
+  padding: 170px;
+  color: white;
+}
+
+section {
+  text-align: center;
+  padding: 80px 0px;
+}
+section .section-heading {
+  font-size: 36px;
+  margin-top: 0px;
+}
+section .section-subheading {
+  font-size: 16px;
+}
+
+.col-sea {
+  padding: 90px;
+}
+.col-sea img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+section.story {
+  background-color: #eee;
+}
+section.story .col-md-6 {
+  padding: 20px;
+}
+section.story .icon-sea {
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+section.pictures {
+  padding: 0px;
+  color: white;
+}
+section.pictures .col-md-6 {
+  padding: 150px;
+  cursor: pointer;
+}
+section.pictures .col-md-6:hover p {
+  opacity: 0.7;
+}
+section.pictures .col-md-6:hover:before {
+  filter: brightness(0.5);
+  background-size: auto 120%;
+}
+section.pictures .col-md-6:before {
+  content: "";
+  display: block;
+  z-index: -1;
+  transition-duration: 0.5s;
+  background-position: center center;
+}
+section.pictures .pic1 {
+  background-image: url(https://i.ytimg.com/vi/KEjU6RhoSGU/maxresdefault.jpg);
+  background-size: cover;
+}
+section.pictures .pic2 {
+  background-image: url(https://www.wired.com/images_blogs/wiredscience/2013/06/chair15-cc2.jpg);
+  background-size: cover;
+}
+section.pictures p {
+  opacity: 0.4;
+  transition-duration: 0.5s;
+}
+
+section.ask {
+  background-color: #01233C;
+  color: white;
+}
